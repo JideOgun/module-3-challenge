@@ -2,10 +2,13 @@
 var generateBtn = document.querySelector("#generate");
 
 // generate random password
-let values = "ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
+let Char = "ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+";
 var generatePassword = function(){
-  return 'ddd';
-}
+  randvalues = Math.floor(Math.random() * 128);
+  values = (Char.charAt(randvalues));
+  
+  return values;
+ }
 
 
 // Write password to the #password input
@@ -14,7 +17,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-  console.log(password);
+  
    //add password to textbox/display area
 document.getElementById("password").value = generatePassword();
 }
